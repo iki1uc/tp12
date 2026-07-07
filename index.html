@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TP12 – 12-Punkte-System</title>
+    <style>
+        body { background:#111; color:#0f0; font-family:monospace; padding:20px; }
+        pre { background:#222; padding:15px; border-radius:6px; border:1px solid #444; }
+    </style>
+</head>
+<body>
+
+<h2>TP12 – 12-Punkte-System</h2>
+<pre id="out">loading…</pre>
+
+<script src="12te.js"></script>
+<script>
+    const out = document.getElementById("out");
+    out.textContent = JSON.stringify(tp12_scan(), null, 2);
+</script>
+
+</body>
+</html>
 
