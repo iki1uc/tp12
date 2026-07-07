@@ -1,1 +1,31 @@
+// TP12-ID – allumfassende 12-Punkte-Struktur
+
+const TP12_ID = {
+    meta: {
+        name: "TP12",
+        position: "Untere Schicht",
+        purpose: "12-Punkte-Systembasis",
+        version: "1.0"
+    },
+
+    structure: {
+        tp4_top: "4 Punkte oben",
+        tp8_mid: "8 Punkte Mitte (2×TP4 + Stütze)",
+        tp4_bottom: "4 Punkte unten"
+    },
+
+    relations: {
+        above: "TP8",
+        base_of: "TP-System",
+        expands_from: "TP4 + TP8"
+    },
+
+    topology: {
+        form: "TP12 = TP4 oben + TP8 Mitte + TP4 unten",
+        points: 12,
+        stable: true
+    }
+};
+
+console.log(TP12_ID);
 
