@@ -1,112 +1,115 @@
-# TP12 – Die vollständige 12‑Punkte‑Struktur des TP‑Systems
+# TP12 – Orbit-Meta Modul  
+System-ID: IKI1UC-TP12-SYSID-AX12-ORBIT3-V1.0
 
-TP12 ist die **untere Schicht** des gesamten TP‑Systems.  
-Es besteht aus **12 Punkten**, die sich aus drei Ebenen zusammensetzen:
+TP12 ist das Orbit-Meta-Modul des IKI1UC-Systems.  
+Es steuert die Umlauf-Logik, Meta-Bewegungen, Orbit-Stabilität und die Verbindung
+zwischen den äußeren Achsen und dem Multi-Vektor X4.
 
-- **TP4 oben**  
-- **TP8 Mitte**  
-- **TP4 unten**
-
-Damit bildet TP12 die **breiteste und stabilste Form** im TP‑System.
+TP12 ist das höchste Modul der 12 Ebenen und bildet die Meta-Schicht des Systems.
 
 ---
 
-## 🔹 Struktur
+## 📌 Kernfunktionen von TP12
 
-### TP4 oben (4 Punkte)
-Die obere Schicht liefert die Grundform:
+- Kontrolle der Orbit-Ebenen (IN, MID, OUT)
+- Meta-Regulierung der Achsen IX → ORBIT-OUT
+- Stabilisierung der Umlauf-Bewegungen
+- Verbindung zwischen X4 und Orbit
+- Kontrolle der Pipeline-Stufe 12
+- Meta-Bewertung der Cache-POST Zustände
+- Meta-Synthese für TP3, TP4, TP6, TP9
 
-- Kern  
-- Monitor  
-- Sched  
-- UI  
-
-Diese vier Rollen bilden die **Start‑Geometrie**.
-
----
-
-### TP8 Mitte (8 Punkte)
-Die Mitte besteht aus:
-
-- **TP4A** (4 Punkte)  
-- **TP4B** (4 Punkte)  
-- **Mittelstütze** (Stabilisierung)
-
-TP8 ist die **kritische Mitte**, die ohne Stütze kippen würde.  
-Die Mittelstütze verhindert die bekannte **„8ter‑Macke“**.
+TP12 ist das Modul, das entscheidet, wie das System sich im Umlauf verhält:
+- Wann ein Zustand in den Orbit geht
+- Wie lange er stabil bleibt
+- Wann er den Orbit verlässt
 
 ---
 
-### TP4 unten (4 Punkte)
-Die untere Schicht spiegelt die obere:
+## 📁 Eingebundene CSV-Dateien
 
-- Kern  
-- Monitor  
-- Sched  
-- UI  
+### tp-achsen-12.csv  
+Definiert die 12 Achsen des Systems.
 
-Sie bildet die **Basis**, auf der TP12 stabil steht.
+### tp-orbit-3.csv  
+Orbit-Ebenen: Eingang, Stabil, Ausgang.
 
----
+### tp-pipeline-12.csv  
+Pipeline-Stufen für alle Achsen.
 
-## 🔹 Geometrie
+### tp-algorithmus-12.csv  
+Algorithmische Funktionen jeder Achse.
 
-TP4 oben
-TP8 Mitte
-TP4 unten
+### tp-marktrolle-12.csv  
+Marktrollen der 12 Achsen.
 
+### tp-cache-matrix.csv  
+Cache-PRE/POST-Zustände und Cache-Funktionen.
 
-Damit entsteht die **12‑Punkte‑Form**, die das gesamte TP‑System trägt.
+### tp-x4-matrix.csv  
+X4-Kompatibilität jeder Achse.
 
----
+### modul-marktrolle-12.csv  
+Marktrollen der 12 Grundmodule.
 
-## 🔹 Zweck von TP12
-
-TP12 ist:
-
-- die **unterste Schicht**  
-- die **breiteste Struktur**  
-- die **Stabilitätsbasis**  
-- die **Erweiterung von TP4 und TP8**  
-- die **Fundament‑Geometrie** des TP‑Systems
-
-Ohne TP12 wäre das TP‑System **nicht vollständig**.
+### tp-marktrolle-5.csv  
+Marktrollen der TP-Module.
 
 ---
 
-## 🔹 Code
+## 🔧 Rolle von TP12 im System
 
-Der TP12‑Code liegt in `12te.js` und enthält:
+TP12 ist das **Orbit-Meta-Modul** und übernimmt:
 
-- TP4 oben  
-- TP8 Mitte (2×TP4 + Stütze)  
-- TP4 unten  
-- TP12‑Scan‑Funktion  
+- Orbit-Steuerung  
+- Meta-Synthese  
+- Umlauf-Stabilisierung  
+- X4-Orbit-Brücke  
+- Pipeline-Stufe 12  
+- Meta-Kontrolle der Cache-POST Zustände  
+
+TP12 ist notwendig, damit:
+
+- Orbit korrekt arbeitet  
+- X4 stabil mit Orbit verbunden ist  
+- Pipeline 12 vollständig nutzbar ist  
+- Meta-Regeln eingehalten werden  
+- Umlauf-Bewegungen nicht kollidieren  
 
 ---
 
-## 🔹 Weiterführende Ebenen
+## 📌 Status
 
-- **[TP4](ca://s?q=TP4_Erkl%C3%A4ren)** – Grundform  
-- **[TP8](ca://s?q=TP8_Erkl%C3%A4ren)** – Mitte  
-- **[TP12](ca://s?q=TP12_Erkl%C3%A4ren)** – Basis  
+TP12 ist **AKTIV** und vollständig eingebunden.  
+Alle relevanten CSV-Dateien sind vorhanden.
 
-TP12 ist die **dritte und letzte Schicht** des TP‑Systems.
-# TP12 – Technische Beschreibung
+---
 
-TP12 ist die 12‑Punkte‑Ebene des TP‑Systems.  
-Sie setzt sich aus drei Schichten zusammen:
+## 🔗 Weiterführende Module
 
-1. **TP4_TOP** – obere 4 Punkte  
-2. **TP8_MID** – mittlere 8 Punkte  
-   - TP4A  
-   - TP4B  
-   - Mittelstütze  
-3. **TP4_BOTTOM** – untere 4 Punkte  
+- **[TP3](ca://s?q=TP3_Info)** – Norm-Regulatorik  
+- **[TP4](ca://s?q=TP4_Info)** – Pipeline-Synthese  
+- **[TP6](ca://s?q=TP6_Info)** – Anker-Kern  
+- **[TP9](ca://s?q=TP9_Info)** – Normmodul  
 
-## Topologie
+---
 
+## 🧩 Kompatibilität
 
+TP12 ist kompatibel mit:
 
-TP12 ist definiert als:
+- 12-Achsen-Matrix  
+- Orbit-3  
+- Cache-Matrix  
+- X4-Matrix  
+- Pipeline-12  
+- Marktrolle-12  
+- TP-Marktrolle-5  
+
+---
+
+## 📜 Version
+
+Version: **1.0**  
+System-ID: **IKI1UC-TP12-SYSID-AX12-ORBIT3-V1.0**
 
